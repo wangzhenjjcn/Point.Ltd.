@@ -1,0 +1,186 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仪表盘主页</title>
+    <link rel="stylesheet" href="css/yibiaopan.css"/>
+    <script src="js/jquery-1.12.1.min.js" charset="utf-8"></script>
+    <script src="js/jquery.cookie.js" charset="utf-8"></script>
+    <script src="js/module/core/main.js" charset="utf-8"></script>
+    <script src="js/module/core/user.js" charset="utf-8"></script>
+    <script src="js/module/index/index.js" charset="utf-8"></script>
+    <script src="js/module/skp/core.js" charset="utf-8"></script>
+    <script src="js/module/skp/skp.js" charset="utf-8"></script>
+    <script>
+        <!--hover换样式-->
+        function bianhua1(){
+            var d = document;
+            d.getElementsByClassName("d1a1")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('dd1')[0].style.background='gainsboro';
+                d.getElementsByClassName('dd1')[0].style.opacity='0.8';
+                d.getElementsByClassName('dda1')[0].style.color='black';
+            });
+            d.getElementsByClassName("d1a1")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda1')[0].style.color='#fed900';
+                d.getElementsByClassName('dd1')[0].style.background='#fff';
+            })
+        }
+        function bianhua2(){
+            var d = document;
+            d.getElementsByClassName("d1a2")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('dd2')[0].style.background='#fff';
+                d.getElementsByClassName('dda2')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("d1a2")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda2')[0].style.color='black';
+                d.getElementsByClassName('dd2')[0].style.background='gainsboro';
+            })
+        }
+        function bianhua3(){
+            var d = document;
+            d.getElementsByClassName("d1a3")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('dd3')[0].style.background='#fff';
+                d.getElementsByClassName('dda3')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("d1a3")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda3')[0].style.color='black';
+                d.getElementsByClassName('dd3')[0].style.background='gainsboro';
+            })
+        }
+        function bianhua4(){
+            var d = document;
+            d.getElementsByClassName("d1a4")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('dd4')[0].style.background='#fff';
+                d.getElementsByClassName('dda4')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("d1a4")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda4')[0].style.color='black';
+                d.getElementsByClassName('dd4')[0].style.background='gainsboro';
+            })
+        }
+        function bianhua5(){
+            var d = document;
+            d.getElementsByClassName("d1a5")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('dd5')[0].style.background='#fff';
+                d.getElementsByClassName('dda5')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("d1a5")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda5')[0].style.color='black';
+                d.getElementsByClassName('dd5')[0].style.background='gainsboro';
+            })
+        }
+        function bianhua6(){
+            var d = document;
+            d.getElementsByClassName("d1b1")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('dd6')[0].style.background='#fff';
+                d.getElementsByClassName('dda6')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("d1b1")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda6')[0].style.color='black';
+                d.getElementsByClassName('dd6')[0].style.background='gainsboro';
+            })
+        }
+        function bianhua7(){
+            var d = document;
+            d.getElementsByClassName("d1b2")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('dd7')[0].style.background='#fff';
+                d.getElementsByClassName('dda7')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("d1b2")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda7')[0].style.color='black';
+                d.getElementsByClassName('dd7')[0].style.background='gainsboro';
+            })
+        }
+        function bianhua8(){
+            var d = document;
+            d.getElementsByClassName("d1b3")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('dd8')[0].style.background='#fff';
+                d.getElementsByClassName('dda8')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("d1b3")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda8')[0].style.color='black';
+                d.getElementsByClassName('dd8')[0].style.background='gainsboro';
+            })
+        }
+        function bianhua9(){
+            var d = document;
+            d.getElementsByClassName("d1b4")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('dd9')[0].style.background='#fff';
+                d.getElementsByClassName('dda9')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("d1b4")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda9')[0].style.color='black';
+                d.getElementsByClassName('dd9')[0].style.background='gainsboro';
+            })
+        }
+        function bianhua10(){
+            var d = document;
+            d.getElementsByClassName("d1b5")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('dd10')[0].style.background='#fff';
+                d.getElementsByClassName('dda10')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("d1b5")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda10')[0].style.color='black';
+                d.getElementsByClassName('dd10')[0].style.background='gainsboro';
+            })
+        }
+
+
+
+    </script>
+    <style>
+        .d00{
+            width: 240px;
+            height: 502px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d00">
+        <div class="d1a">
+            <div class="d1a1 dd1" onmouseover="bianhua1()">
+                <dt><a href="#"><img class="i1" src="images/xiangmuguanli.png" alt=""/></a></dt>
+                <dd><a class="dda1" style="color: #f3d924;text-decoration: none;" href="#">项目管理</a></dd>
+            </div>
+            <div class="d1a2 dd2" onmouseover="bianhua2()" onclick="huxingtiaozhuan()">
+                <dt><a href="#"><img class="i2" src="images/huxingguanli.png" alt=""/></a></dt>
+                <dd><a class="dda2" href="#">户型管理</a></dd>
+            </div>
+            <div class="d1a3 dd3" onmouseover="bianhua3()">
+                <dt><a href="#"><img class="i3" src="images/tongyongguize.png" alt=""/></a></dt>
+                <dd><a class="dda3" href="#">通用规则</a></dd>
+            </div>
+            <div class="d1a4 dd4" onmouseover="bianhua4()">
+                <dt><a href="#"><img class="i4" src="images/yunxuanran.png" alt=""/></a></dt>
+                <dd><a class="dda4" href="#">云渲染</a></dd>
+            </div>
+            <div class="d1a5 dd5" onmouseover="bianhua5()">
+                <dt><a href="#"><img class="i5" src="images/zujian.png" alt=""/></a></dt>
+                <dd><a class="dda5" href="#">组件</a></dd>
+            </div>
+        </div>
+        <div class="d1b">
+            <div class="d1b1 dd6" onmouseover="bianhua6()">
+                <dt><a href="#"><img class="i6" src="images/baobiao.png" alt=""/></a></dt>
+                <dd><a class="dda6" href="#">报表</a></dd>
+            </div>
+            <div class="d1b2 dd7" onmouseover="bianhua7()">
+                <dt><a href="#"><img class="i7" src="images/moxingguanli.png" alt=""/></a></dt>
+                <dd><a class="dda7" href="#">模型管理</a></dd>
+            </div>
+            <div class="d1b3 dd8" onmouseover="bianhua8()">
+                <dt><a href="#"><img class="i8" src="images/taocanguanli.png" alt=""/></a></dt>
+                <dd><a class="dda8" href="#">套餐管理</a></dd>
+            </div>
+            <div class="d1b4 dd9" onmouseover="bianhua9()">
+                <dt><a href="#"><img class="i9" src="images/shigong.png" alt=""/></a></dt>
+                <dd><a class="dda9" href="#">施工图</a></dd>
+            </div>
+            <div class="d1b5 dd10" onmouseover="bianhua10()">
+                <dt><a href="#"><img class="i10" src="images/xinglu.png" alt=""/></a></dt>
+                <dd><a class="dda10" href="#">型录</a></dd>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

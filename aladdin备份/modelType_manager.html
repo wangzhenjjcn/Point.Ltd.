@@ -1,0 +1,223 @@
+<!doctype html>
+<htmfl lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模型管理</title>
+    <link rel="stylesheet" href="css/common.css" charset="utf-8"/>
+    <link rel="stylesheet" href="css/modelType_manager.css" charset="utf-8"/>
+    <link rel="stylesheet" href="css/pagination.css" charset="utf-8"/>
+
+</head>
+<body>
+
+<div class="modelType_manager">
+    <div class="m_header">
+        <p class="left">模型管理</p>
+        <form class="center radius">
+            <input placeholder="请输入产品名称" type="text"/>
+            <span>搜索</span>
+        </form>
+        <h2 class="right">
+            <a class="up_model radius" href="#" onclick="skp_upload_my_model()">上传模型</a>
+            <a class="up_danModel radius" href="#" onclick="skp_upload_single_model()">上传单品模型</a>
+
+        </h2>
+    </div>
+    <div class="m_nav">
+        <ul id="box">
+            <li class="active">
+                <a href="#">品牌</a>
+                <ul class="nav1 clearfix">
+                    <li>
+                        <span>一级菜单</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="f_li">
+                <a id="classify" href="#">分类</a>
+                <ul class="nav1 clearfix">
+                    <li>
+                        <span>一级菜单</span>
+                    </li>
+                    <li class="">
+                        <span>一级菜单</span>
+                        <ul class="nav2">
+                            <li>
+                                <span>二级菜单</span>
+                            </li>
+                            <li>
+                                <span>二级菜单</span>
+                                <ul class="nav3">
+                                    <li>
+                                        <span>三级菜单</span>
+                                    </li>
+                                    <li><span>三级菜单</span></li>
+                                    <li><span>三级菜单</span></li>
+                                    <li><span>三级菜单</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>二级菜单</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>一级菜单</li>
+                    <li>一级菜单</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">风格</a>
+                <ul class="nav1 clearfix">
+                    <li>
+                        <span>一级菜单</span>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">色系</a>
+                <ul class="nav1 clearfix">
+                    <li>
+                        <span>一级菜单</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="modelType_content">
+
+    </div>
+
+    <div id="Pagination" class="pagination"></div>
+</div>
+
+<script id="tpl" type="text/juicer">
+            {@each data as model,index}
+                <dl>
+                    <dt>
+                        <img src="${model.thumb}" alt=""/>
+                    <p>
+                        <b><span class="del" onclick="delinfo('${model.id}')">删除</span><span class="editor" onclick="showinfo('${model.id}')">详情</span></b>
+                        <a href="#;"></a>
+                    </p>
+                    </dt>
+                    <dd>
+                        ${model.name}
+                    </dd>
+                </dl>
+            {@/each}
+</script>
+
+
+
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/module/core/main.js"></script>
+<script src="js/juicer-min.js"></script>
+<script src="js/jquery.pagination.js"></script>
+<script src="js/jquery.cookie.js" charset="utf-8"></script>
+
+<script>
+
+    var $page_size = 12;//每页显示数量
+
+    var $queryType='private';//private表示查找我的模型，public表示查找公共模型
+
+    var $tpl=document.getElementById('tpl').innerHTML;
+
+    var dl=$('.modelType_content dl');
+    var num=$(dl).length;
+    if(num >=9){
+        dl.css('margin-right','12px');
+    }else{
+        dl.css('margin-right','14px');
+    }
+
+    $(function(){
+       showlist(1); //显示列表和分页信息
+    });
+
+    function delinfo(id){
+        alert(id);
+    }
+
+    function showinfo(id){
+        alert(id);
+    }
+
+    //分页信息
+    function showlist(pageNum){
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": server_url+"/api/models/totalPage",
+            "method": "POST",
+            "headers": {
+                "access_token": getUserToken(),
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+                "pageSize": $page_size,
+                "queryType": $queryType
+            }
+        }
+        $.ajax(settings).done(function (response) {
+            console.log(response.data.totalPage)
+             $("#Pagination").pagination(response.data.totalPage, {
+                current_page:pageNum-1,
+                items_per_page: 1 ,//每页显示1项
+                callback:function(){
+                    var select_page_num=$('#Pagination .current:not(.prev):not(.next)').text()
+                    console.log(select_page_num);
+                    modellist(select_page_num)
+                    return false;
+                }
+            });
+        });
+
+    }
+
+    function modellist(pageNum){
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": server_url+"/api/models/my?queryType=private&pageSize="+$page_size+"&pageNo="+pageNum,
+            "method": "GET",
+            "headers": {
+                "access_token": getUserToken()
+            }
+        }
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            var tpl_html = juicer($tpl, response);//模板赋值
+
+            $(".modelType_content").empty();
+            $(".modelType_content").html(tpl_html);
+        });
+    }
+
+    //m_nav点击
+    $('.m_nav').on('click','#box>li', function () {
+//        alert(1);
+        $(this).addClass('active').siblings().removeClass('active');
+        $(this).find('.nav1').show();
+    }).on("mouseleave",'#box>li',function(){
+        $("#box .nav1").hide();
+    });
+    //显示二级
+    $('.m_nav .nav1>li').on('mouseenter',function(){
+        $(this).addClass('active_li').siblings().removeClass('active_li');
+        $(this).siblings().find('ul').hide();
+        $(this).children('ul').show();
+    }).on("mouseleave",function(){
+        $(this).children('ul').hide();
+        $(this).removeClass('active_li');
+    });
+    //显示三级
+    $('.m_nav .nav1>li li').on('mouseenter',function(){
+        $(this).addClass('active_li').siblings().removeClass('active_li');
+        $(this).siblings().find('ul').hide();
+        $(this).children('ul').show();
+    });
+
+</script>
+</body>
+</htmfl>

@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html lang="en">
+<script src="js/jquery-1.12.1.min.js" charset="utf-8"></script>
+<script src="js/jquery.cookie.js" charset="utf-8"></script>
+<script src="js/module/core/main.js" charset="utf-8"></script>
+<script src="js/module/core/user.js" charset="utf-8"></script>
+<script src="js/module/index/index.js" charset="utf-8"></script>
+<script src="js/module/skp/core.js" charset="utf-8"></script>
+<script src="js/module/skp/skp.js" charset="utf-8"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>阿拉丁_家装服务1站式平台</title>
+    <link rel="stylesheet" href="css/yibiaopan.css"/>
+    <style type="text/css">
+
+        ul,li,div {padding:0;margin:0;}
+
+        ul li {float:left;width:75px;height:30px;line-height:30px;text-align:center;background-color:#fff;}
+
+        ul li.fli {border:1px #bbb solid;border-bottom:1px solid white;border-radius: 4px;}
+
+        ul li.fli1 {border-bottom:1px solid #bbb;border-right: 1px solid #bbb;}
+
+        ul li.fli2 {border-bottom:1px solid #bbb;}
+
+        ul {overflow:hidden;zoom:1;list-style-type:none;margin-top: 10px;}
+
+        #tab_con {width:240px;height:502px;}
+
+    </style>
+    <!--hover换图-->
+    <script>
+        function huantu1(){
+            var d = document;
+            d.getElementsByClassName("fli")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName("img2")[0].setAttribute('src', 'images/zhuye_2.png');
+            });
+            d.getElementsByClassName("fli")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName("img2")[0].setAttribute('src', 'images/zhuye_1.png');
+            })
+        }
+        function huantu2(){
+            var d = document;
+            d.getElementsByClassName("fli1")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName("img3")[0].setAttribute('src', 'images/yunku_2.png');
+            });
+            d.getElementsByClassName("fli1")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName("img3")[0].setAttribute('src', 'images/yunku_1.png');
+            })
+        }
+        function huantu3(){
+            var d = document;
+            d.getElementsByClassName("fli2")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName("img4")[0].setAttribute('src', 'images/shezhi_2.png');
+            });
+            d.getElementsByClassName("fli2")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName("img4")[0].setAttribute('src', 'images/shezhi_1.png');
+            })
+        }
+    </script>
+</head>
+<body>
+<div class="d0">
+
+    <div  onclick="skp_my_house_html()">
+        <dd><a class="dda2" href="#">户型管理</a></dd>
+    </div>
+
+    <div  onclick="skp_my_model_html()">
+        <dd><a class="dda2" href="#">模型管理</a></dd>
+    </div>
+
+
+    <!--头部-->
+    <div class="header">
+        <div class="touxiang">
+            <img src="images/touxiang.png" alt="touxiang"/>
+        </div>
+        <div class="mingzi">
+            <h3>DIM设计师</h3>
+        </div>
+    </div>
+    <!--头部结束-->
+    <!--中间内容-->
+    <div class="section">
+        <ul id="tab">
+
+            <li class="fli" onmouseover="huantu1()" onclick="zhuye()"><img class="img2" src="images/zhuye_1.png" alt=""/></li>
+
+            <li class="fli1" onmouseover="huantu2()" onclick="yunku()"><img class="img3" src="images/yunku_1.png" alt=""/></li>
+
+            <li class="fli2" onmouseover="huantu3()" onclick="shezhiye()"><img class="img4" src="images/shezhi_1.png" alt=""/></li>
+
+        </ul>
+
+        <iframe id="if1" class="if1" src="yibiaopanzhuye.html" frameBorder="0" width="238" scrolling="no" height="502">
+
+        </iframe>
+
+    </div>
+</div>
+    <!--中间内容结束-->
+    <!--尾部-->
+    <div class="footer">
+        <dl>
+            <dt><img src="images/aladdin.png" alt=""/></dt>
+            <dd>设计 软装 VR/AR</dd>
+        </dl>
+    </div>
+    <!--尾部结束-->
+</body>
+<!--JS代码-->
+
+<script type="text/javascript">
+
+function zhuye(){
+    var iFrameElem=document.getElementById("if1");
+    iFrameElem.src='yibiaopanzhuye.html'
+}
+function yunku(){
+    var iFrameElem=document.getElementById("if1");
+    iFrameElem.src='pingmiantuku.html'
+}
+function shezhiye(){
+    var iFrameElem=document.getElementById("if1");
+    iFrameElem.src='set_index.html'
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传单品模型</title>
+    <link rel="stylesheet" href="css/common.css" charset="utf-8"/>
+    <link rel="stylesheet" href="css/upload_model.css" charset="utf-8"/>
+    <link rel="stylesheet" href="css/upload_danModel.css" charset="utf-8"/>
+
+</head>
+<body>
+<div class="upload_model">
+    <div class="load_header">上传单品模型</div>
+    <h1>选择模型</h1>
+    <div class="load_search">
+        <input placeholder="请输入单品模型名称" class="radius" type="text"/><span class="search_btn">搜索</span>
+    </div>
+    <h1>O R</h1>
+    <div style="height: 61px;" class="set_model">
+        <div id="brand_m_tpl" class="fenLei">
+
+            <script id="brand_tpl" type="text/juicer">
+             品牌
+                <ul class="nav1 clearfix">
+                        <li onclick="selectBrand(0)">
+                            <span>全部</span>
+                        </li>
+                    {@each data as it,index}
+                        <li onclick="selectBrand(${it.brand_id})">
+                            <span>${it.brand_name}</span>
+                        </li>
+                    {@/each}
+                </ul>
+             </script>
+
+        </div>
+
+        <div id="category_m_tpl" class="fenLei">
+
+            <script id="category_tpl" type="text/juicer">
+             类别
+                <ul class="nav1 clearfix">
+                        <li >
+                            <span>全部</span>
+                        </li>
+                    {@each data as it,index}
+                    <li>
+                    <span>${it.gc_name}</span>
+                        <ul class="nav2">
+
+                            {@each it.categoryVOs as it2,index2}
+                            <li class="">
+                                <span>${it2.gc_name}</span>
+                                    <ul class="nav3">
+                                        {@each it2.categoryVOs as it3,index3}
+                                        <li><span>${it3.gc_name}</span></li>
+                                        {@/each}
+                                    </ul>
+                            </li>
+                             {@/each}
+                        </ul>
+                    </li>
+                    {@/each}
+                </ul>
+             </script>
+
+        </div>
+    </div>
+    <!--商品列表展示开始-->
+    <div class="shopList_box">
+        <div class="shop_list_show radius">
+            <div class="shop_list">
+            <!--商品勾选的类shop_check-->
+            <!--商品禁选的类shop_disable-->
+            <span class="shop_disabled"></span>
+            <dl>
+                <dt>
+                    <img src="images/modelType_manager/download.png" alt=""/>
+                    <b class="bs"></b>
+                </dt>
+                <dd>
+                    <h2><em>名称 : </em>灯光邓鼓德邦地嗯嗯嗯</h2>
+                    <h3><em>型号 : </em>THOO-999</h3>
+                    <h4><em>品牌 : </em>绿信</h4>
+                </dd>
+            </dl>
+        </div>
+            <div class="shop_list">
+            <!--商品勾选的类shop_check-->
+            <!--商品禁选的类shop_disable-->
+            <span class="shop_disabled"></span>
+            <dl>
+                <dt>
+                    <img src="images/modelType_manager/download.png" alt=""/>
+                    <b class="bs"></b>
+                </dt>
+                <dd>
+                    <h2><em>名称 : </em>灯光邓鼓德邦地嗯嗯嗯</h2>
+                    <h3><em>型号 : </em>THOO-999</h3>
+                    <h4><em>品牌 : </em>绿信</h4>
+                </dd>
+            </dl>
+        </div>
+            <div class="shop_list">
+            <span class="shop_check"></span>
+            <dl>
+                <dt>
+                    <img src="images/modelType_manager/download.png" alt=""/>
+                    <b></b>
+                </dt>
+                <dd>
+                    <h2><em>名称 : </em>灯光邓鼓德邦地嗯嗯嗯</h2>
+                    <h3><em>型号 : </em>THOO-999</h3>
+                    <h4><em>品牌 : </em>绿信</h4>
+                </dd>
+            </dl>
+        </div>
+            <div class="shop_list">
+            <!--商品勾选的类shop_check-->
+            <!--商品禁选的类shop_disable-->
+            <span></span>
+            <dl>
+                <dt>
+                    <img src="images/modelType_manager/download.png" alt=""/>
+                    <b></b>
+                </dt>
+                <dd>
+                    <h2><em>名称 : </em>灯光邓鼓德邦地嗯嗯嗯</h2>
+                    <h3><em>型号 : </em>THOO-999</h3>
+                    <h4><em>品牌 : </em>绿信</h4>
+                </dd>
+            </dl>
+        </div>
+        </div>
+        <div class="load_page">
+            <a class="prev_page" href="javascript:void(0)">上一页</a>
+            <a class="last_page" href="javascript:void(0)">下一页</a>
+        </div>
+    </div>
+    <!--商品列表展示结束-->
+    <h1>选择区域</h1>
+    <div class="area_choose">
+        <p class="check"><img src="images/modelType_manager/area_icon1.png" alt=""/></p>
+        <p><img src="images/modelType_manager/area_icon2.png" alt=""/></p>
+        <p><img src="images/modelType_manager/area_icon3.png" alt=""/></p>
+        <p><img src="images/modelType_manager/area_icon4.png" alt=""/></p>
+        <p><img src="images/modelType_manager/area_icon5.png" alt=""/></p>
+        <p><img src="images/modelType_manager/area_icon6.png" alt=""/></p>
+    </div>
+    <h1>设置模型属性</h1>
+    <div style="height: auto;overflow: hidden;" class="set_model">
+        <div>风格</div>
+        <div>色系</div>
+        <div>模型类型</div>
+        <div>材质类型</div>
+        <div>阶段</div>
+        <div>工程分类</div>
+    </div>
+    <div class="property_cont">
+        <h5>
+            <p>
+                <label for="">尺寸 : </label>
+                <input class="radius" type="text"/>
+            </p>
+            <p>
+                <label for="">材质 : </label>
+                <input class="radius" type="text"/>
+            </p>
+            <p>
+                <label for="">人工费 : </label>
+                <input class="radius" type="text"/>
+            </p>
+            <p>
+                <label for="">材料费 : </label>
+                <input class="radius" type="text"/>
+            </p>
+            <p>
+                <label for="">搬运费 : </label>
+                <input class="radius" type="text"/>
+            </p>
+            <p>
+                <label for="">安装费 : </label>
+                <input class="radius" type="text"/>
+            </p>
+            <p>
+                <label for="">损耗费 : </label>
+                <input class="radius" type="text"/>
+            </p>
+            <p>
+                <label for="">单价 : </label>
+                <input class="radius" type="text"/>
+            </p>
+            <p>
+                <label for="">输出类型 : </label>
+                <input class="radius" type="text"/>
+            </p>
+        </h5>
+        <h6>
+            <em>是否自动应用</em>
+            <span class="checking">是</span>
+            <span>否</span>
+        </h6>
+    </div>
+    <div class="handle_btn">
+        <p>
+            <input class="reset" type="button" value="取消"/>
+            <input class="submit" type="submit" value="提交"/>
+        </p>
+    </div>
+    <div class="mark"><img src="images/modelType_manager/loadings.gif" alt=""/></div>
+
+</div>
+<script src="js/jquery-1.12.1.min.js"></script>
+<script src="js/jquery.cookie.js" charset="utf-8"></script>
+<script src="js/juicer-min.js"></script>
+<script src="js/module/core/main.js"></script>
+<script src="js/module/core/user.js"></script>
+<script src="js/module/skp/core.js" charset="utf-8"></script>
+<script src="js/module/skp/skp.js" charset="utf-8"></script>
+<script>
+    $(function(){
+        //单选
+        $('.shop_list_show').on('click','span',function(){
+            $(this).parent().siblings().find('span').removeClass('shop_check');
+            $(this).addClass('shop_check');
+        });
+        //搜索显示列表loading
+        $('.search_btn').on('click',function(){
+            loadShow('.shopList_box');
+            //你说
+        });
+
+    //点击上一页loading
+        $('.prev_page').on('click',function(){
+            loadShow();
+        });
+//        下一页loading
+        $('.last_page').on('click',function(){
+            loadShow();
+        });
+        //loading
+        function loadShow( className ){
+            $('.mark').show();
+            setTimeout(function(){
+                $('.mark').fadeOut();
+
+                if(className){//如果有参数 用传进来的参数，
+                    test(className);
+                }else{
+                    test('.shopList_box');
+                }
+
+            },1000);
+        }
+        function test( className ){
+            setTimeout(function() {
+                $('.mark').stop().fadeOut();
+                $(className).stop().fadeIn();
+            },300)
+        }
+
+
+
+//        是否自动应用单选
+        $('.property_cont h6').on('click','span',function(){
+            $(this).parent().find('span').removeClass('checking');
+            $(this).addClass('checking');
+        });
+
+
+
+
+
+    })
+
+    function selectBrand(id){
+
+    }
+
+    function loadBrand(){
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": brand_list_url,
+            "method": "GET",
+            "headers": {
+                "access_token": getUserToken(),
+            }
+        }
+
+        var barnd_tpl =document.getElementById('brand_tpl').innerHTML;
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            var code = response.code;
+            if(code==200){
+                var tpl_html = juicer(barnd_tpl, response);//模板赋值
+                $("#brand_m_tpl").empty();
+                $("#brand_m_tpl").html(tpl_html);
+
+            }else{
+                alert("服务器错误，请稍后重试");
+            }
+        });
+
+    }
+
+    function loadCategory(){
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": category_list_url,
+            "method": "GET",
+            "headers": {
+                "access_token": getUserToken(),
+            }
+        }
+
+        var category_tpl =document.getElementById('category_tpl').innerHTML;
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            var code = response.code;
+            if(code==200){
+                var tpl_html = juicer(category_tpl, response);//模板赋值
+                $("#category_m_tpl").empty();
+                $("#category_m_tpl").html(tpl_html);
+
+            }else{
+                alert("服务器错误，请稍后重试");
+            }
+        });
+
+    }
+
+    function init_category_event(){
+        //点击分类菜单
+        $('.set_model').on('mouseenter','.fenLei', function () {
+            $(this).find('.nav1').show();
+        }).on("mouseleave",'.fenLei',function(){
+            $(".nav1").hide();
+        });
+        //显示二级
+        $(document).on('mouseenter','.set_model .nav1>li',function(){
+            $(this).addClass('active_li').siblings().removeClass('active_li');
+            $(this).siblings().find('ul').hide();
+            $(this).children('ul').show();
+        }).on("mouseleave",'.set_model .nav1>li',function(){
+            $(this).children('ul').hide();
+            $(this).removeClass('active_li');
+        });
+        //显示三级
+        $(document).on('mouseenter','.set_model .nav1>li li',function(){
+            $(this).addClass('active_li').siblings().removeClass('active_li');
+            $(this).siblings().find('ul').hide();
+            $(this).children('ul').show();
+        });
+    }
+
+    loadBrand();
+    loadCategory();
+
+    init_category_event();
+
+
+</script>
+</body>
+</html>

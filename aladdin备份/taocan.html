@@ -1,0 +1,504 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云库-套餐</title>
+    <link rel="stylesheet" href="css/yunku.css"/>
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/module/core/main.js" charset="utf-8"></script>
+    <script src="//cdn.bootcss.com/juicer/0.6.14/juicer-min.js"></script>
+    <style>
+        .d00{
+            width: 240px;
+            height: 461px;
+            background: gold;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        <!--hover换样式-->
+        function bianhua1(){
+            var d = document;
+            d.getElementsByClassName("youce1_1")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce1_1')[0].style.background='#fff';
+                d.getElementsByClassName('dda1')[0].style.color='#818181';
+            });
+            d.getElementsByClassName("youce1_1")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda1')[0].style.color='#fed900';
+                d.getElementsByClassName('youce1_1')[0].style.background='#e9e9e9';
+            })
+        }
+        function bianhua2(){
+            var d = document;
+            d.getElementsByClassName("youce1_2")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce1_2')[0].style.background='#e9e9e9';
+                d.getElementsByClassName('dda2')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("youce1_2")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda2')[0].style.color='#818181';
+                d.getElementsByClassName('youce1_2')[0].style.background='#fff';
+            })
+        }
+        function bianhua3(){
+            var d = document;
+            d.getElementsByClassName("youce1_3")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce1_3')[0].style.background='#e9e9e9';
+                d.getElementsByClassName('dda3')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("youce1_3")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda3')[0].style.color='#818181';
+                d.getElementsByClassName('youce1_3')[0].style.background='#fff';
+            })
+        }
+        function bianhua4(){
+            var d = document;
+            d.getElementsByClassName("youce1_4")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce1_4')[0].style.background='#e9e9e9';
+                d.getElementsByClassName('dda4')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("youce1_4")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda4')[0].style.color='#818181';
+                d.getElementsByClassName('youce1_4')[0].style.background='#fff';
+            })
+        }
+        function bianhua5(){
+            var d = document;
+            d.getElementsByClassName("youce1_5")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce1_5')[0].style.background='#e9e9e9';
+                d.getElementsByClassName('dda5')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("youce1_5")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda5')[0].style.color='#818181';
+                d.getElementsByClassName('youce1_5')[0].style.background='#fff';
+            })
+        }
+        function bianhua6(){
+            var d = document;
+            d.getElementsByClassName("youce2_1")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce2_1')[0].style.background='#e9e9e9';
+                d.getElementsByClassName('dda6')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("youce2_1")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda6')[0].style.color='#818181';
+                d.getElementsByClassName('youce2_1')[0].style.background='#fff';
+            })
+        }
+        function bianhua7(){
+            var d = document;
+            d.getElementsByClassName("youce2_2")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce2_2')[0].style.background='#e9e9e9';
+                d.getElementsByClassName('dda7')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("youce2_2")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda7')[0].style.color='#818181';
+                d.getElementsByClassName('youce2_2')[0].style.background='#fff';
+            })
+        }
+        function bianhua8(){
+            var d = document;
+            d.getElementsByClassName("youce2_3")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce2_3')[0].style.background='#e9e9e9';
+                d.getElementsByClassName('dda8')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("youce2_3")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda8')[0].style.color='#818181';
+                d.getElementsByClassName('youce2_3')[0].style.background='#fff';
+            })
+        }
+        function bianhua9(){
+            var d = document;
+            d.getElementsByClassName("youce2_4")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce2_4')[0].style.background='#e9e9e9';
+                d.getElementsByClassName('dda9')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("youce2_4")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda9')[0].style.color='#818181';
+                d.getElementsByClassName('youce2_4')[0].style.background='#fff';
+            })
+        }
+        function bianhua10(){
+            var d = document;
+            d.getElementsByClassName("youce2_5")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce2_5')[0].style.background='#e9e9e9';
+                d.getElementsByClassName('dda10')[0].style.color='#fed900';
+            });
+            d.getElementsByClassName("youce2_5")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda10')[0].style.color='#818181';
+                d.getElementsByClassName('youce2_5')[0].style.background='#fff';
+            })
+        }
+        <!--下拉-->
+        $(function(){
+            $(".ss1").click(function () {
+                $(".xiala").toggle()
+            })
+            $(".d00_a1").click(function () {
+                $(".xiala").toggle()
+            })
+        })
+        $(function(){
+            $(".ss1").click(function () {
+                $(".ss2").toggle()
+            })
+            $(".d00_a1").click(function () {
+                $(".ss2").toggle()
+            })
+        })
+        $(function(){
+            $(".taoxia_1d").click(function(){
+                $(".xiala2").toggle()
+            })
+        })
+        <!--hover换样式-->
+        function pp1(){
+            var d = document;
+            d.getElementsByClassName("pp1")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('pp1')[0].style.background='#f3d924';
+                d.getElementsByClassName('pp1')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("pp1")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('pp1')[0].style.color='#808080';
+                d.getElementsByClassName('pp1')[0].style.background='#fff';
+            })
+        }
+        function pp2(){
+            var d = document;
+            d.getElementsByClassName("pp2")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('pp2')[0].style.background='#f3d924';
+                d.getElementsByClassName('pp2')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("pp2")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('pp2')[0].style.color='#808080';
+                d.getElementsByClassName('pp2')[0].style.background='#fff';
+            })
+        }
+        function pp3(){
+            var d = document;
+            d.getElementsByClassName("pp3")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('pp3')[0].style.background='#f3d924';
+                d.getElementsByClassName('pp3')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("pp3")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('pp3')[0].style.color='#808080';
+                d.getElementsByClassName('pp3')[0].style.background='#fff';
+            })
+        }
+        function pp4(){
+            var d = document;
+            d.getElementsByClassName("pp4")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('pp4')[0].style.background='#f3d924';
+                d.getElementsByClassName('pp4')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("pp4")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('pp4')[0].style.color='#808080';
+                d.getElementsByClassName('pp4')[0].style.background='#fff';
+            })
+        }
+
+        function ppp1(){
+            var d = document;
+            d.getElementsByClassName("p1")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('p1')[0].style.background='#f3d924';
+                d.getElementsByClassName('p1')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("p1")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('p1')[0].style.color='#fff';
+                d.getElementsByClassName('p1')[0].style.background='gray';
+            })
+        }
+        function ppp2(){
+            var d = document;
+            d.getElementsByClassName("p2")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('p2')[0].style.background='#f3d924';
+                d.getElementsByClassName('p2')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("p2")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('p2')[0].style.color='#fff';
+                d.getElementsByClassName('p2')[0].style.background='gray';
+            })
+        }
+        function ppp3(){
+            var d = document;
+            d.getElementsByClassName("p3")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('p3')[0].style.background='#f3d924';
+                d.getElementsByClassName('p3')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("p3")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('p3')[0].style.color='#fff';
+                d.getElementsByClassName('p3')[0].style.background='gray';
+            })
+        }
+        function ppp4(){
+            var d = document;
+            d.getElementsByClassName("p4")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('p4')[0].style.background='#f3d924';
+                d.getElementsByClassName('p4')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("p4")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('p4')[0].style.color='#fff';
+                d.getElementsByClassName('p4')[0].style.background='gray';
+            })
+        }
+        function ppp5(){
+            var d = document;
+            d.getElementsByClassName("p5")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('p5')[0].style.background='#f3d924';
+                d.getElementsByClassName('p5')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("p5")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('p5')[0].style.color='#fff';
+                d.getElementsByClassName('p5')[0].style.background='gray';
+            })
+        }
+        function ppp6(){
+            var d = document;
+            d.getElementsByClassName("p6")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('p6')[0].style.background='#f3d924';
+                d.getElementsByClassName('p6')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("p6")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('p6')[0].style.color='#fff';
+                d.getElementsByClassName('p6')[0].style.background='gray';
+            })
+        }
+    </script>
+
+</head>
+<body>
+<div class="d00">
+    <div class="d00_a">
+        <div class="d00_a1">
+            <span>套&nbsp;餐</span>
+        </div>
+        <span class="ss1"></span>
+        <span class="ss2"></span>
+        <div class="xiala" id="kk">
+            <p class="pp1" onmouseover="pp1()" onclick="pppp1()">平面图库</p>
+            <p class="pp2" onmouseover="pp2()" onclick="pppp2()">套餐</p>
+            <p class="pp3" onmouseover="pp3()" onclick="pppp3()">户型库</p>
+            <p class="pp4" onmouseover="pp4()" onclick="pppp4()">单品模型</p>
+        </div>
+    </div>
+    <div class="taoxia">
+        <div class="taoxia_1">
+            <div class="taoxia_1a">
+                <a href="#">全部</a>
+            </div>
+            <div class="taoxia_1b">
+                <a href="#">面积</a>
+            </div>
+            <div class="taoxia_1c">
+                <a href="#">风格</a>
+            </div>
+            <div class="taoxia_1d">
+                <a href="#">价格</a>
+            </div>
+        </div>
+        <!--下拉-->
+        <div class="xiala2">
+            <div class="xiala2_1">
+                <p class="p1" onmouseover="ppp1()">5-10/万</p>
+                <p class="p2" onmouseover="ppp2()">11-30/万</p>
+            </div>
+            <div class="xiala2_2">
+                <p class="p3" onmouseover="ppp3()">31-50/万</p>
+                <p class="p4" onmouseover="ppp4()">51-90/万</p>
+            </div>
+            <div class="xiala2_3">
+                <p class="p5" onmouseover="ppp5()">100万以上</p>
+                <p class="p6" onmouseover="ppp6()">11-30/万</p>
+            </div>
+        </div>
+        <div id="html"></div>
+ 		<script id="tpl" type="text/template">
+	        {@each data as it,index}
+	            <div class="${'taoxia_1'}"></div>
+	            	<img src="${it.effect}" alt=""/>
+	            	<div class="taoxia_2a">
+                		<p class="p1">面积：<span>${it.area} m&sup2</span> 风格：<span>${it.style}</span></p>
+                		<p class="p2">价格：<span>${it.unitprice}万</span></p>
+            		</div>
+	        {@/each}
+		</script>
+	<script>
+	var htmlData = {};
+	intHtml();
+	function intHtml(){
+		var settings = {
+		          "async": true,
+		          "crossDomain": true,
+		          "url": server_url+"/packages/my?keyword=1",
+		          "method": "get",
+		          "error": function(XMLHttpRequest, textStatus, errorThrown){
+		              var response =  XMLHttpRequest.responseText;
+		              //console.log(response);
+		              var data = eval('(' + response + ')');
+		              alert(data.error_description);
+		          },
+		          "headers": {
+		              "content-type": "application/x-www-form-urlencoded"
+		          }
+		      }
+		      $.ajax(settings).done(function (response) {
+		          var data = response;
+		          htmlData = data;
+		          debugger;
+		      	var tpl = document.getElementById('tpl').innerHTML;
+		    	var html = juicer(tpl, htmlData);
+		    	document.getElementById('html').innerHTML = html;
+		      });	
+	}	
+	</script>
+    </div>
+</div>
+<script>
+    <!--hover换样式-->
+    function bianse1(){
+        var d = document;
+        d.getElementsByClassName("li1")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li1')[0].style.background='gainsboro';
+            d.getElementsByClassName('li1')[0].style.opacity='0.8';
+            d.getElementsByClassName('a1')[0].style.color='black';
+        });
+        d.getElementsByClassName("li1")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a1')[0].style.color='#fed900';
+            d.getElementsByClassName('li1')[0].style.background='#fff';
+        })
+    }
+    function bianse2(){
+        var d = document;
+        d.getElementsByClassName("li2")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li2')[0].style.background='#fff';
+            d.getElementsByClassName('a2')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li2")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a2')[0].style.color='black';
+            d.getElementsByClassName('li2')[0].style.background='gainsboro';
+        })
+    }
+    function bianse3(){
+        var d = document;
+        d.getElementsByClassName("li3")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li3')[0].style.background='#fff';
+            d.getElementsByClassName('a3')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li3")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a3')[0].style.color='black';
+            d.getElementsByClassName('li3')[0].style.background='gainsboro';
+        })
+    }
+    function bianse4(){
+        var d = document;
+        d.getElementsByClassName("li4")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li4')[0].style.background='#fff';
+            d.getElementsByClassName('a4')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li4")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a4')[0].style.color='black';
+            d.getElementsByClassName('li4')[0].style.background='gainsboro';
+        })
+    }
+    function bianse5(){
+        var d = document;
+        d.getElementsByClassName("li5")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li5')[0].style.background='#fff';
+            d.getElementsByClassName('a5')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li5")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a5')[0].style.color='black';
+            d.getElementsByClassName('li5')[0].style.background='gainsboro';
+        })
+    }
+    function bianse6(){
+        var d = document;
+        d.getElementsByClassName("li6")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li6')[0].style.background='#fff';
+            d.getElementsByClassName('a6')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li6")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a6')[0].style.color='black';
+            d.getElementsByClassName('li6')[0].style.background='gainsboro';
+        })
+    }
+    function bianse7(){
+        var d = document;
+        d.getElementsByClassName("li7")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li7')[0].style.background='#fff';
+            d.getElementsByClassName('a7')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li7")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a7')[0].style.color='black';
+            d.getElementsByClassName('li7')[0].style.background='gainsboro';
+        })
+    }
+    function bianse8(){
+        var d = document;
+        d.getElementsByClassName("li8")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li8')[0].style.background='#fff';
+            d.getElementsByClassName('a8')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li8")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a8')[0].style.color='black';
+            d.getElementsByClassName('li8')[0].style.background='gainsboro';
+        })
+    }
+    function bianse9(){
+        var d = document;
+        d.getElementsByClassName("li9")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li9')[0].style.background='#fff';
+            d.getElementsByClassName('a9')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li9")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a9')[0].style.color='black';
+            d.getElementsByClassName('li9')[0].style.background='gainsboro';
+        })
+    }
+    function bianse10(){
+        var d = document;
+        d.getElementsByClassName("li10")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li10')[0].style.background='#fff';
+            d.getElementsByClassName('a10')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li10")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a10')[0].style.color='black';
+            d.getElementsByClassName('li10')[0].style.background='gainsboro';
+        })
+    }
+    function bianse11(){
+        var d = document;
+        d.getElementsByClassName("li11")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li11')[0].style.background='#fff';
+            d.getElementsByClassName('a11')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li11")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a11')[0].style.color='black';
+            d.getElementsByClassName('li11')[0].style.background='gainsboro';
+        })
+    }
+    function bianse12(){
+        var d = document;
+        d.getElementsByClassName("li12")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li12')[0].style.background='#fff';
+            d.getElementsByClassName('a12')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li12")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a12')[0].style.color='black';
+            d.getElementsByClassName('li12')[0].style.background='gainsboro';
+        })
+    }
+    <!--换网页-->
+    function pppp1(){
+        window.location.href="pingmiantuku.html";
+    }
+    function pppp2(){
+        window.location.href="taocan.html";
+    }
+    function pppp3(){
+        window.location.href="huxingku.html";
+    }
+    function pppp4(){
+        window.location.href="moxingye.html";
+    }
+</script>
+</body>
+</html>

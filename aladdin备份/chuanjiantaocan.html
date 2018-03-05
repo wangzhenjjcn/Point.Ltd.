@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DIM</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/jquery-1.11.1.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.cookie.js" charset="utf-8"></script>
+<script src="js/module/core/main.js" charset="utf-8"></script>
+<script src="js/module/core/user.js" charset="utf-8"></script>
+<script src="//cdn.bootcss.com/juicer/0.6.14/juicer-min.js"></script>
+
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+<h4>创建套餐</h4>
+<hr>
+<div class="row">
+
+<form class="form-horizontal" role="form">
+	<div class="form-group">
+    	<label class="col-md-2 col-sm-2 control-label">套餐规则：</label>
+			<div class="col-md-10 col-sm-10">
+		<select class="form-control"  >
+			<option>系列规则</option>
+			<option>系列规则2</option>
+			<option>系列规则3</option>
+			<option>系列规则4</option>
+			<option>系列规则5</option>
+		</select>
+        </div>
+        </div>
+
+
+		<div class="form-group">
+		<label for="inputName" class="col-md-2 col-sm-2 control-label">套餐名称：</label>
+		<div class="col-md-10 col-sm-10">
+			<input type="name" class="form-control" id="inputName" 
+				   placeholder="请输入套餐名称">
+		</div>
+	</div>
+    <div class="form-group">
+    	<label class="col-md-2 col-sm-2 control-label">套餐风格：</label>
+			<div class="col-md-10 col-sm-10">
+		<select class="form-control"  >
+			<option>中式</option>
+			<option>中式2</option>
+			<option>中式3</option>
+			<option>中式4</option>
+			<option>中式5</option>
+		</select>
+        </div>
+        </div>
+            <div class="form-group">
+    	<label class="col-md-2 col-sm-2 control-label">套餐单价：</label>
+			<div class="col-md-10 col-sm-10">
+		<select class="form-control"  >
+			<option>￥1199/㎡</option>
+			<option>￥1199/㎡2</option>
+			<option>￥1199/㎡3</option>
+			<option>￥1199/㎡4</option>
+			<option>￥1199/㎡5</option>
+		</select>
+        </div>
+        </div>
+         <div class="form-group">
+    	<label class="col-md-2 col-sm-2 control-label">套餐面积：</label>
+			<div class="col-md-10 col-sm-10">
+		<select class="form-control"  >
+			<option>80-120㎡</option>
+			<option>80-120㎡2</option>
+			<option>80-120㎡3</option>
+			<option>80-120㎡4</option>
+			<option>80-120㎡5</option>
+		</select>
+        </div>
+        </div>
+        <div class="form-group">
+    	<label class="col-md-2 col-sm-2 control-label">效果图：</label>
+			<div class="col-md-10 col-sm-10">
+		<button type="button" class="btn btn-primary ">
+  <span class="glyphicon glyphicon-open"></span> 上传效果图
+</button><span class="pull-right">支持格式：.JPG/.DEG</span>
+        </div>
+
+        </div>
+        <div class="col-md-2 col-sm-2"></div>
+ <div class="col-md-10 col-sm-10"><div class="well well-lg text-center txyl">图形预览</div></div>
+ 
+ 
+ 	<div class="form-group"><label class="col-md-2 col-sm-2 control-label">区域效果：</label>
+ <div class="col-md-10 col-sm-10">
+ <div class="row">
+  <div class="col-xs-3 col-md-3 qyxg">
+  <p class="text-center">客餐厅</p>
+    <a href="#" class="thumbnail">
+      <span class="glyphicon glyphicon-inbox center-block"></span>
+    </a>
+  </div>
+  <div class="col-xs-3 col-md-3 qyxg">
+  <p class="text-center">主卧</p>
+     <a href="#" class="thumbnail">
+      <span class="glyphicon glyphicon-inbox center-block"></span>
+    </a>
+  </div>
+  <div class="col-xs-3 col-md-3 qyxg">
+  <p class="text-center">次卧</p>
+    <a href="#" class="thumbnail">
+      <span class="glyphicon glyphicon-inbox center-block"></span>
+    </a>
+  </div>
+  <div class="col-xs-3 col-md-3 qyxg">
+  <p class="text-center">书房</p>
+     <a href="#" class="thumbnail">
+      <span class="glyphicon glyphicon-inbox center-block"></span>
+    </a>
+  </div>
+    <div class="col-xs-3 col-md-3 qyxg">
+  <p class="text-center">厨房</p>
+     <a href="#" class="thumbnail">
+      <span class="glyphicon glyphicon-inbox center-block"></span>
+    </a>
+  </div>
+    <div class="col-xs-3 col-md-3 qyxg">
+  <p class="text-center">卫生间</p>
+     <a href="#" class="thumbnail">
+      <span class="glyphicon glyphicon-inbox center-block"></span>
+    </a>
+  </div>
+    <div class="col-xs-3 col-md-3 qyxg">
+  <p class="text-center">阳台</p>
+     <a href="#" class="thumbnail">
+      <span class="glyphicon glyphicon-inbox center-block"></span>
+    </a>
+  </div>
+    <div class="col-xs-3 col-md-3 qyxg">
+  <p class="text-center">设备阳台</p>
+     <a href="#" class="thumbnail">
+      <span class="glyphicon glyphicon-inbox center-block"></span>
+    </a>
+  </div>
+ 
+</div>
+
+ </div>
+
+
+
+</form>
+
+
+    <div class="row text-center" ><button type="button" class="btn btn-warning upload01">&nbsp;&nbsp;上&nbsp;传&nbsp;&nbsp;</button>
+
+
+ <button type="button" class="btn btn-default upload">&nbsp;&nbsp;取&nbsp;消&nbsp;&nbsp;</button>
+ </div>
+
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

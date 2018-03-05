@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="js/jquery-1.12.1.min.js" charset="utf-8"></script>
+<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="div_each">
+</div>
+<script id="each" type="text/x-jquery-tmpl">
+    <h3>users</h3>
+    {{each(i,user) users}}
+        <div>${i+1}:{{= user.name}}</div>
+        {{if i==0}}
+            <h4>group</h4>
+            {{each(j,group) groups}}
+                <div>${group.name}</div>
+            {{/each}}
+        {{/if}}
+    {{/each}}
+    <h3>depart</h3>
+    {{each departs}}
+        <div>{{= $value.name}}</div>
+    {{/each}}
+</script>
+<script type="text/javascript">
+    var eachData = { users: [{ name: 'jerry' }, { name: 'john'}], groups: [{ name: 'mingdao' }, { name: 'meihua' }, { name: 'test'}], departs: [{ name: 'IT'}] };
+    $("#each").tmpl(eachData).appendTo('#div_each');
+</script>
+</body>
+</html>

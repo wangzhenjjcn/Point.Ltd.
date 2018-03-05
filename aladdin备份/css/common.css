@@ -1,0 +1,21 @@
+@charset "utf-8";
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img ,button,tr,td,th{ margin:0; padding:0; }
+fieldset, img,button,input{ border:none; }
+img{display: block;}
+ul, ol { list-style:none; }
+input,button { padding-top:0; padding-bottom:0;}
+select, input { vertical-align:middle;line-height: 1; }
+select, input, textarea { font-size:12px; margin:0; }
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+textarea { resize:none; }
+table { border-collapse:collapse;}
+body{font: 14px/1.5 '微软雅黑',Arial;}
+.clearfix:after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { zoom:1; }
+.clearit { clear:both; height:0; font-size:0; overflow:hidden; }
+i,em,strong{font-style: normal;}
+a{text-decoration: none;color: #8c8c8c;font-size: 12px;}
+html,body{
+    color: #333333;
+}
+

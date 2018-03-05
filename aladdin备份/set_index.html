@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置页</title>
+    <link rel="stylesheet" href="css/common.css" charset="utf-8"/>
+    <link rel="stylesheet" href="css/set.css" charset="utf-8"/>
+</head>
+<body>
+<div class="set_index_box">
+    <ul>
+        <li class="my_info">
+            我的资料
+            <span></span>
+        </li>
+        <li class="update_password">
+            修改密码
+            <span></span>
+        </li>
+        <li class="adout_alad">
+            关于阿拉丁
+            <span></span>
+        </li>
+    </ul>
+    <div class="quit_login"><a href="javascript:void(0);">退出登录</a></div>
+    <!-- mark-->
+    <div class="set_mark"></div>
+    <!--弹框我的资料查看-->
+    <div style="display: none;" class="bombInfo_check bomb_position">
+        <h2><em></em>我的资料<span>编辑</span></h2>
+        <dl>
+            <dt><img src="images/set_pic.png" alt=""/></dt>
+            <dd>DIM设计师</dd>
+        </dl>
+        <p style="margin-top: 10px;"><span>姓&nbsp;&nbsp;&nbsp;名 :</span>DIM设计师</p>
+        <p><span>性&nbsp;&nbsp;&nbsp;别 :</span>女</p>
+        <p><span>生&nbsp;&nbsp;&nbsp;日 :</span>2016-12-25</p>
+        <p><span>手机号 :</span>13835021250</p>
+        <p><span>地&nbsp;&nbsp;&nbsp;区 :</span>立水桥</p>
+    </div>
+    <!-- 弹框我的资料查看结束-->
+    <!-- 弹框我的资料编辑开始-->
+    <div style="display: none;" class="bombInfo_editor bomb_position">
+        <h2><em></em>我的资料<span>完成</span></h2>
+        <dl>
+            <dt>
+                <img src="images/set_pic.png" alt=""/>
+                <span></span>
+            </dt>
+            <dd>DIM设计师</dd>
+        </dl>
+        <p>
+            <label for="">姓 名 :</label>
+            <input placeholder="DIM设计师" type="text"/>
+        </p>
+        <p>
+            <label for="">性 别 :</label>
+            <input placeholder="女" type="text"/>
+        </p>
+        <p>
+            <label for="">生 日 :</label>
+            <input placeholder="2016-12-25" type="text"/>
+        </p>
+        <p>
+            <label for="">手机号:</label>
+            <input placeholder="2016-12-25" type="text"/>
+        </p>
+        <p>
+            <label class="address" for="">地 区 :</label>
+            <select>
+                <option value="山西">山西</option>
+                <option value="原平">江西</option>
+                <option value="大同">上海</option>
+            </select>
+            <select>
+                <option value="山西">马天宇</option>
+                <option value="原平">薛之谦</option>
+                <option value="大同">邓紫棋</option>
+            </select>
+            <select>
+                <option value="山西">上饶</option>
+                <option value="原平">原平</option>
+                <option value="大同">大同</option>
+            </select>
+        </p>
+    </div>
+    <!-- 弹框我的资料编辑结束-->
+    <!-- 弹框修改密码开始-->
+    <div style="display: none;" class="bombMack_password bomb_position">
+        <h2><em></em>修改密码</h2>
+        <dl>
+            <dt><img src="images/set_pic.png" alt=""/></dt>
+            <dd>DIM设计师</dd>
+        </dl>
+        <p style="margin-top:15px;">
+            <label for="">原&nbsp;&nbsp;密 码</label>
+            <input placeholder="请输入原密码" type="password"/>
+        </p>
+        <p>
+            <label for="">新&nbsp;&nbsp;密 码</label>
+            <input placeholder="密码长度0-20个字符" type="password"/>
+        </p>
+        <p>
+            <label for="">确认密码</label>
+            <input placeholder="请再次输入新密码" type="password"/>
+        </p>
+        <h3>
+            <a class="submit_btn" href="javascript:void(0);">提交</a>
+            <a class="go_back" href="javascript:void(0);">返回</a>
+        </h3>
+    </div>
+    <!-- 弹框修改密码结束-->
+    <!-- 关于阿拉丁开始-->
+    <div style="display: none;" class="bombAbout_us bomb_position">
+        <h2><em></em>关于阿拉丁</h2>
+        <p>是我的胡扯吧殴斗是必须哈莫雷怕五边形</p>
+        <p>是我的胡扯吧殴斗是必须哈莫雷怕五边形</p>
+    </div>
+    <!-- 关于阿拉丁结束-->
+    <!-- 退出登录开始-->
+    <div style="display: none;" class="bombLogin bomb_position">
+        <h2><em></em>退出</h2>
+        <dl>
+            <dt><img src="images/set_pic.png" alt=""/></dt>
+            <dd>DIM设计师</dd>
+        </dl>
+        <p style="margin-top: 20px;">退出登录将无法使用工具!</p>
+        <p>您确定退出登录吗？</p>
+        <h4>
+            <a class="yes_btn" href="javascript:void(0);">确定</a>
+            <a class="go_back" href="javascript:void(0);">返回</a>
+        </h4>
+    </div>
+    <!-- 退出登录结束-->
+</div>
+<script src="js/jquery-1.12.1.min.js" charset="utf-8"></script>
+<script>
+$(function(){
+//    我的资料
+    $('.my_info').on('click',function(){
+        $('.set_mark').css('display','block');
+        $('.bombInfo_check').css('display','block');
+    });
+    $('.bombInfo_check h2').on('click','span',function(){
+        $('.bombInfo_check').css('display','none');
+        $('.bombInfo_editor').css('display','block');
+    });
+    $('.bombInfo_editor h2').on('click','span',function(){
+        $('.bombInfo_editor').css('display','none');
+        $('.set_mark').css('display','none');
+    });
+    $('.bomb_position h2').on('click','em',function(){
+        $('.bombInfo_check').css('display','none');
+        $('.bombInfo_editor').css('display','none');
+        $('.bombMack_password').css('display','none');
+        $('.bombAbout_us').css('display','none');
+        $('.bombLogin').css('display','none');
+        $('.set_mark').css('display','none');
+    });
+    //修改密码
+    $('.update_password').on('click',function(){
+        $('.set_mark').css('display','block');
+        $('.bombMack_password').css('display','block');
+    });
+    $('.go_back').on('click',function(){
+        $('.bombMack_password').css('display','none');
+        $('.bombLogin').css('display','none');
+        $('.set_mark').css('display','none');
+    });
+//    关于我们
+    $('.adout_alad').on('click',function(){
+        $('.set_mark').css('display','block');
+        $('.bombAbout_us').css('display','block');
+    });
+//    退出登录
+    $('.quit_login').on('click',function(){
+        $('.bombLogin').css('display','block');
+    });
+    $('.yes_btn').on('click',function(){
+        window.location.href='http://login.html';
+    })
+})
+</script>
+</body>
+</html>

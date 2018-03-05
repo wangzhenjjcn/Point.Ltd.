@@ -1,0 +1,278 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云库-单品模型</title>
+    <link rel="stylesheet" href="css/yunku.css"/>
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/module/core/main.js" charset="utf-8"></script>
+    <script src="//cdn.bootcss.com/juicer/0.6.14/juicer-min.js"></script>  
+    <style>
+        .d00{
+            width: 240px;
+            height: 461px;
+            background: gold;
+            overflow: hidden;
+        }
+        ul li:hover {
+        background:#f3d924;
+        color:fff;
+        }
+    </style>
+    <script>
+        <!--hover换样式-->
+        function bianhua12(){
+            var d = document;
+            d.getElementsByClassName("youce1_1")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('youce1_1')[0].style.background='#fff';
+                d.getElementsByClassName('dda1')[0].style.color='#818181';
+            });
+            d.getElementsByClassName("youce1_1")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('dda1')[0].style.color='#fed900';
+                d.getElementsByClassName('youce1_1')[0].style.background='#e9e9e9';
+            })
+        }
+        
+        <!--下拉-->
+        $(function(){
+            $(".ss1").click(function () {
+                $(".xiala").toggle()
+            })
+            $(".d00_a1").click(function () {
+                $(".xiala").toggle()
+            })
+        })
+        $(function(){
+            $(".ss1").click(function () {
+                $(".ss2").toggle()
+            })
+            $(".d00_a1").click(function () {
+                $(".ss2").toggle()
+            })
+        })
+        <!--hover换样式-->
+        function pp1(){
+            var d = document;
+            d.getElementsByClassName("pp1")[0].addEventListener('mouseover',function(){
+                d.getElementsByClassName('pp1')[0].style.background='#f3d924';
+                d.getElementsByClassName('pp1')[0].style.color='#fff';
+            });
+            d.getElementsByClassName("pp1")[0].addEventListener('mouseout',function(){
+                d.getElementsByClassName('pp1')[0].style.color='#808080';
+                d.getElementsByClassName('pp1')[0].style.background='#fff';
+            })
+        }
+       
+    </script>
+</head>
+<body>
+<div class="d00">
+    <div class="d00_a">
+        <div class="d00_a1">
+            <span>单品模型</span>
+        </div>
+        <span class="ss1"></span>
+        <span class="ss2"></span>
+        <div class="xiala" id="kk">
+            <p class="pp1" onmouseover="pp1()" onclick="pppp1()">平面图库</p>
+            <p class="pp2" onmouseover="pp2()" onclick="pppp2()">套餐</p>
+            <p class="pp3" onmouseover="pp3()" onclick="pppp3()">户型库</p>
+            <p class="pp4" onmouseover="pp4()" onclick="pppp4()">单品模型</p>
+        </div>
+    </div>
+    <div class="d00_b">
+        <ul style="height: 512px;">
+            <li style="background: #DAD8D9;margin-left: 3px;"><a class="a1" href="#"><img style="margin-top: 7px;" src="images/sousuo.jpg" alt=""/></a></li>
+            <li class="li2" style="background: #DAD8D9;" ><a class="a2" href="#">全部</a></li>
+            <li class="li3" style="background: #DAD8D9;" onmouseover="bianse3()"><a class="a3" href="#">客厅</a></li>
+            <li class="li4" style="background: #DAD8D9;" onmouseover="bianse4()"><a class="a4" href="#">餐厅</a></li>
+            <li class="li5" style="background: #DAD8D9;" onmouseover="bianse5()"><a class="a5" href="#">主卧</a></li>
+            <li class="li6" style="background: #DAD8D9;" onmouseover="bianse6()"><a class="a6" href="#">次卧</a></li>
+            <li class="li7" style="background: #DAD8D9;" onmouseover="bianse7()"><a class="a7" href="#">厨房</a></li>
+            <li class="li8" style="background: #DAD8D9;" onmouseover="bianse8()"><a class="a8" href="#">阳台</a></li>
+            <li class="li9" style="background: #DAD8D9;" onmouseover="bianse9()"><a class="a9" href="#">卫生间</a></li>
+            <li class="li10" style="background: #DAD8D9;" onmouseover="bianse10()"><a class="a10" href="#">踢脚</a></li>
+            <li class="li11" style="background: #DAD8D9;" onmouseover="bianse11()"><a class="a11" href="#">吊顶</a></li>
+            <li class="li12" style="background: #DAD8D9;" onmouseover="bianse12()"><a class="a12" href="#">收藏</a></li>
+        </ul>
+        <div class="danyou">
+            <div class="danyou_1">
+                <div class="danyou_1a">
+                    <p>品牌</p>
+                </div>
+                <div class="danyou_1b">
+                    <p>风格</p>
+                </div>
+                <div class="danyou_1c">
+                    <p>色系</p>
+                </div>
+            </div>
+            <div class="danyou_2">
+                <img src="images/yangpin1.jpg" alt=""/>
+                <h3>欣饰素色墙纸蚕丝壁纸</h3>
+                <p>价格：<span>158/元 m&sup2</span></p>
+            </div>
+            <div class="danyou_3">
+                <img src="images/yangpin2.jpg" alt=""/>
+                <h3>欣饰素色墙纸蚕丝壁纸</h3>
+                <p>价格：<span>158/元 m&sup2</span></p>
+            </div>
+            <div class="danyou_4">
+                <img src="images/yangpin3.jpg" alt=""/>
+                <h3>欣饰素色墙纸蚕丝壁纸</h3>
+                <p>价格：<span>158/元 m&sup2</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    <!--hover换样式-->
+    function bianse11(){
+        var d = document;
+        d.getElementsByClassName("li1")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li1')[0].style.background='gainsboro';
+            d.getElementsByClassName('li1')[0].style.opacity='0.8';
+            d.getElementsByClassName('a1')[0].style.color='black';
+        });
+        d.getElementsByClassName("li1")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a1')[0].style.color='#fed900';
+            d.getElementsByClassName('li1')[0].style.background='#fff';
+        })
+    }
+    function bianse22(){
+        var d = document;
+        d.getElementsByClassName("li2")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li2')[0].style.background='#fff';
+            d.getElementsByClassName('a2')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li2")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a2')[0].style.color='black';
+            d.getElementsByClassName('li2')[0].style.background='gainsboro';
+        })
+    }
+    function bianse32(){
+        var d = document;
+        d.getElementsByClassName("li3")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li3')[0].style.background='#fff';
+            d.getElementsByClassName('a3')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li3")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a3')[0].style.color='black';
+            d.getElementsByClassName('li3')[0].style.background='gainsboro';
+        })
+    }
+    function bianse4(){
+        var d = document;
+        d.getElementsByClassName("li4")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li4')[0].style.background='#fff';
+            d.getElementsByClassName('a4')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li4")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a4')[0].style.color='black';
+            d.getElementsByClassName('li4')[0].style.background='gainsboro';
+        })
+    }
+    function bianse5(){
+        var d = document;
+        d.getElementsByClassName("li5")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li5')[0].style.background='#fff';
+            d.getElementsByClassName('a5')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li5")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a5')[0].style.color='black';
+            d.getElementsByClassName('li5')[0].style.background='gainsboro';
+        })
+    }
+    function bianse6(){
+        var d = document;
+        d.getElementsByClassName("li6")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li6')[0].style.background='#fff';
+            d.getElementsByClassName('a6')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li6")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a6')[0].style.color='black';
+            d.getElementsByClassName('li6')[0].style.background='gainsboro';
+        })
+    }
+    function bianse7(){
+        var d = document;
+        d.getElementsByClassName("li7")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li7')[0].style.background='#fff';
+            d.getElementsByClassName('a7')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li7")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a7')[0].style.color='black';
+            d.getElementsByClassName('li7')[0].style.background='gainsboro';
+        })
+    }
+    function bianse8(){
+        var d = document;
+        d.getElementsByClassName("li8")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li8')[0].style.background='#fff';
+            d.getElementsByClassName('a8')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li8")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a8')[0].style.color='black';
+            d.getElementsByClassName('li8')[0].style.background='gainsboro';
+        })
+    }
+    function bianse9(){
+        var d = document;
+        d.getElementsByClassName("li9")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li9')[0].style.background='#fff';
+            d.getElementsByClassName('a9')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li9")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a9')[0].style.color='black';
+            d.getElementsByClassName('li9')[0].style.background='gainsboro';
+        })
+    }
+    function bianse10(){
+        var d = document;
+        d.getElementsByClassName("li10")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li10')[0].style.background='#fff';
+            d.getElementsByClassName('a10')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li10")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a10')[0].style.color='black';
+            d.getElementsByClassName('li10')[0].style.background='gainsboro';
+        })
+    }
+    function bianse11(){
+        var d = document;
+        d.getElementsByClassName("li11")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li11')[0].style.background='#fff';
+            d.getElementsByClassName('a11')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li11")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a11')[0].style.color='black';
+            d.getElementsByClassName('li11')[0].style.background='gainsboro';
+        })
+    }
+    function bianse12(){
+        var d = document;
+        d.getElementsByClassName("li12")[0].addEventListener('mouseover',function(){
+            d.getElementsByClassName('li12')[0].style.background='#fff';
+            d.getElementsByClassName('a12')[0].style.color='#fed900';
+        });
+        d.getElementsByClassName("li12")[0].addEventListener('mouseout',function(){
+            d.getElementsByClassName('a12')[0].style.color='black';
+            d.getElementsByClassName('li12')[0].style.background='gainsboro';
+        })
+    }
+    <!--换网页-->
+    function pppp1(){
+        window.location.href="pingmiantuku.html";
+    }
+    function pppp2(){
+        window.location.href="taocan.html";
+    }
+    function pppp3(){
+        window.location.href="huxingku.html";
+    }
+    function pppp4(){
+        window.location.href="moxingye.html";
+    }
+</script>
+</body>
+</html>
